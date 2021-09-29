@@ -36,5 +36,6 @@ describe('4 - Quem sobreviveu?', () => {
   });
   test('depois da quinta aventura', () => {
     expect(adventure.specialists.length).toBe(1);
+    console.log(adventure.specialists);
   });
 });
