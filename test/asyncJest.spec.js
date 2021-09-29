@@ -11,7 +11,7 @@ ATENÇÃO!!! Edite apenas este arquivo. Não altere os arquivos da pasta 'src'.
 
 describe('1 - O retorno do telefonema', () => {
   test('atende', async () => {
-    answerPhone(true).then((result) => result.toEqual('Oi!'));
+    await answerPhone(true).then((result) => result.toEqual('Oi!'));
     // Insira seu teste assíncrono aqui
   });
   test('ocupado', () => {
