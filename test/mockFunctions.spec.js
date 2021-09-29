@@ -21,11 +21,14 @@ describe('3 - Verifica as funções e os mocks', () => {
   mockFunctions.divide = jest.fn().mockImplementation((a, b) => a / b);
   mockFunctions.power = jest.fn().mockImplementation((a, b) => a ** b);
   mockFunctions.factorial = jest.fn().mockImplementation((a) => {
-    let result = a;
-    while (a > 1) {
-      a -= 1;
-      result *= a;
-    } return result;
+    const arr = [];
+    while (a > 0) { arr.push(a); a -= 1; }
+    return arr.reduce((acumulador, atual) => acumulador * atual);
+    // let result = a;
+    // while (a > 1) {
+    //   a -= 1;
+    //   result *= a;
+    // } return result;
   });
 
   test('testa função add', () => {
